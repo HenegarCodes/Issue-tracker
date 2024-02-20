@@ -1,14 +1,13 @@
 import './home.css'
-//import Login from './Login';
-// import SignUp from './SignUp';
+import Login from './Login';
+import SignUp from './Signup'
 // import Logout from './Logout';
 
 
 
 const Home = (props) => {
     
-const {loggedin, email} =props
-const navigate = useNavigate();
+
 
 const onButtonClick = () =>{
     //update later
@@ -20,6 +19,11 @@ const onButtonClick = () =>{
 
         <div className={'titleContainer'}>
             <div>        <h1>Issue Tracker!</h1></div>
+
+            <div>
+                <Login />
+                <SignUp />
+            </div>
         
         </div>
     </div>
