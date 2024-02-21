@@ -11,7 +11,7 @@ const Login = () => {
             <input type="text" placeholder="Email" />
             <input type="text" placeholder="Password" />
             <div>
-            <a href="/signup">Create Account</a>
+            <a href="/Signup">Create Account</a>
             <button>Login</button>
             </div>
         </div>

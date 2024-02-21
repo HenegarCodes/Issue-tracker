@@ -1,17 +1,20 @@
+//import { Switch, Route, Redirect } from 'react-router-dom';
+
 import './home.css'
-import Login from './Login';
-import SignUp from './Signup'
+
+
 // import Logout from './Logout';
 
 
 
-const Home = (props) => {
+
+
+const Home = () => {
+    
     
 
 
-const onButtonClick = () =>{
-    //update later
-}
+
 
  return(
     <div className='mainContainer'>
@@ -21,8 +24,7 @@ const onButtonClick = () =>{
             <div>        <h1>Issue Tracker!</h1></div>
 
             <div>
-                <Login />
-                <SignUp />
+   
             </div>
         
         </div>
