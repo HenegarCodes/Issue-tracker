@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function Login() {
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -9,6 +9,7 @@ function Login() {
   const handleToggleForm = () => {
     setIsLogin(!isLogin);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle login or signup logic here using email, password, and confirmPassword state values
@@ -21,27 +22,25 @@ function Login() {
 
   return (
     <div className="login-form">
-    <form onSubmit={handleSubmit}>
-      <h2>{isLogin ? 'Login' : 'Sign Up'}</h2>
-      <div>
-        <label>Email:</label>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-      </div>
-      <div>
-        <label>Password:</label>
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-      </div>
       {!isLogin && (
-        <div>
-          <label>Confirm Password:</label>
-          <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
-        </div>
+        <button onClick={handleToggleForm}>Login</button>
       )}
-      <button type="submit">{isLogin ? 'Login' : 'Sign Up'}</button>
-    </form>
-    <p onClick={handleToggleForm}>{isLogin ? 'Create Account' : 'Login'}</p>
-  </div>
+      {isLogin && (
+        <form onSubmit={handleSubmit}>
+          <h2>Login</h2>
+          <div>
+            <label>Email:</label>
+            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          </div>
+          <div>
+            <label>Password:</label>
+            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          </div>
+          <button type="submit">Login</button>
+          <p onClick={handleToggleForm}>Create Account</p>
+        </form>
+      )}
+    </div>
   );
 }
-    
     export default Login;

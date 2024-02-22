@@ -2,7 +2,7 @@
 
 import './home.css'
 
-
+//import Login from './Login'
 // import Logout from './Logout';
 
 
@@ -24,7 +24,7 @@ const Home = () => {
             <div>        <h1>Issue Tracker!</h1></div>
 
             <div>
-            <LoginForm />
+
             </div>
         
         </div>
