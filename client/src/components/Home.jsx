@@ -24,7 +24,7 @@ const Home = () => {
             <div>        <h1>Issue Tracker!</h1></div>
 
             <div>
-   
+            <LoginForm />
             </div>
         
         </div>
